@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/linkml/linkml-project-cookiecutter",
+  "commit": "b2da87eb7835bfec748a76823d098cac85e8363a",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "EssDiveSampleRF",
+      "__project_slug": "essdivesamplerf",
+      "github_org": "heycatwonton",
+      "__source_path": "src/essdivesamplerf/schema/essdivesamplerf.yaml",
+      "project_description": "ESS-Dive Sample RF",
+      "full_name": "Catherine Wong",
+      "email": "catwong@lbl.gov",
+      "__author": "Catherine Wong <catwong@lbl.gov>",
+      "license": "MIT",
+      "main_schema_class": "EssDiveSample",
+      "create_python_classes": "Yes",
+      "use_schemasheets": "No",
+      "google_sheet_id": "1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ",
+      "google_sheet_tabs": "personinfo enums",
+      "__google_sheet_module": "personinfo_enums",
+      "github_token_for_pypi_deployment": "PYPI_PASSWORD",
+      "_template": "https://github.com/linkml/linkml-project-cookiecutter"
+    }
+  },
+  "directory": null
+}

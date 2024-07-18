@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#essdivesamplerf" class="md-skip">
+        <a href="#essdive-sample-reporting-format" class="md-skip">
           Skip to content
         </a>
       
@@ -379,10 +379,10 @@
   </a>
 
 
-<h1 id="essdivesamplerf">EssDiveSampleRF</h1>
-<p>ESS-Dive Sample RF</p>
-<p>URI: https://w3id.org/heycatwonton/EssDiveSampleRF</p>
-<p>Name: EssDiveSampleRF</p>
+<h1 id="essdive-sample-reporting-format">essdive-sample-reporting-format</h1>
+<p>ESS-DIVE recommends registering samples for Global Sample Numbers (IGSNs) through the System for Earth Sample Registration (SESAR). IGSNs are associated with standardized metadata to characterize a variety of different samples and their collection details. These sample identifiers facilitate sample discovery, tracking, and reuse; they are especially useful when sample data is shared with collaborators, sent to different labs or user facilities for analyses, or distributed in different data files, datasets, and/or publications. ESS-DIVE has worked with our community scientists to test use of IGSNs and associated metadata in interdisciplinary Environmental Systems Science (ESS). Here we outline modified IGSN metadata guidelines to account for needs of a variety of related geological and biological samples. While generally following the IGSN core descriptive metadata schema, we provide recommendations for extending sample type terms, and connecting to related templates geared towards biodiversity (Darwin Core) and genomic (Minimum Information about any Sequence, MIxS) samples and specimens. The resulting template and recommendations are an extension of IGSN core metadata - IGSN for Environmental Systems Science (IGSN-ESS).</p>
+<p>URI: https://w3id.org/ess-dive-community/essdive-sample-reporting-format</p>
+<p>Name: essdive-sample-reporting-format</p>
 <h2 id="classes">Classes</h2>
 <table>
 <thead>
@@ -393,16 +393,16 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="EssDiveSampleCollection/">EssDiveSampleCollection</a></td>
-<td>A holder for EssDiveSample objects</td>
-</tr>
-<tr>
-<td><a href="NamedThing/">NamedThing</a></td>
-<td>A generic grouping for any identifiable entity</td>
+<td><a href="DhInterface/">DhInterface</a></td>
+<td>A DataHarmonizer interface</td>
 </tr>
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="EssDiveSample/">EssDiveSample</a></td>
-<td>Represents a EssDiveSample</td>
+<td>Represents ESS-DIVE specification for data</td>
+</tr>
+<tr>
+<td><a href="EssDiveSampleCollection/">EssDiveSampleCollection</a></td>
+<td>A holder for EssDiveSample objects</td>
 </tr>
 </tbody>
 </table>
@@ -416,36 +416,188 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="age_in_years/">age_in_years</a></td>
-<td>Number of years since birth</td>
+<td><a href="biome/">biome</a></td>
+<td>Major environmental system your sample or specimen came from</td>
 </tr>
 <tr>
-<td><a href="birth_date/">birth_date</a></td>
-<td>Date on which a person is born</td>
+<td><a href="collection_date/">collection_date</a></td>
+<td>Date when the sample was collected</td>
 </tr>
 <tr>
-<td><a href="description/">description</a></td>
-<td>A human-readable description for a thing</td>
+<td><a href="collection_id/">collection_id</a></td>
+<td>A unique identifier for the set of information associated with a collection o...</td>
+</tr>
+<tr>
+<td><a href="collection_method/">collection_method</a></td>
+<td>method of collection for the sample</td>
+</tr>
+<tr>
+<td><a href="collection_method_description/">collection_method_description</a></td>
+<td>Description of the collection method for the sample</td>
+</tr>
+<tr>
+<td><a href="collection_time/">collection_time</a></td>
+<td>Time when the sample was collected</td>
+</tr>
+<tr>
+<td><a href="collector_chief_scientist/">collector_chief_scientist</a></td>
+<td>Name of the person(s) who collected the sample</td>
+</tr>
+<tr>
+<td><a href="comment/">comment</a></td>
+<td>Comments or notes about the sample</td>
+</tr>
+<tr>
+<td><a href="country/">country</a></td>
+<td>Country where the sample was collected</td>
+</tr>
+<tr>
+<td><a href="current_archive/">current_archive</a></td>
+<td>Name of institution, museum, or repository where the sample is currently stor...</td>
+</tr>
+<tr>
+<td><a href="current_archive_contact/">current_archive_contact</a></td>
+<td>Address and/or email of the person who should be contacted for information ab...</td>
+</tr>
+<tr>
+<td><a href="depth_in_core_max/">depth_in_core_max</a></td>
+<td>Maximum depth at which a sample was collected, below ground or under water</td>
+</tr>
+<tr>
+<td><a href="depth_in_core_min/">depth_in_core_min</a></td>
+<td>Depth, or minimum depth (if taken over a range) at which a sample was collect...</td>
+</tr>
+<tr>
+<td><a href="depth_scale/">depth_scale</a></td>
+<td>Unit in which the depth is provided, should be meters</td>
+</tr>
+<tr>
+<td><a href="elevation_end/">elevation_end</a></td>
+<td>Maximum elevation at which a sample was collected, if elevation was taken ove...</td>
+</tr>
+<tr>
+<td><a href="elevation_start/">elevation_start</a></td>
+<td>Elevation at which a sample was collected</td>
+</tr>
+<tr>
+<td><a href="elevation_unit/">elevation_unit</a></td>
+<td>Unit that elevation start and/or end are provided in</td>
 </tr>
 <tr>
 <td><a href="entries/">entries</a></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="id/">id</a></td>
-<td>A unique identifier for a thing</td>
+<td><a href="event_id/">event_id</a></td>
+<td>A unique identifier for the set of information associated with an Event (some...</td>
 </tr>
 <tr>
-<td><a href="name/">name</a></td>
-<td>A human-readable name for a thing</td>
+<td><a href="field_name_informal_classification/">field_name_informal_classification</a></td>
+<td>Informal classification of sample</td>
 </tr>
 <tr>
-<td><a href="primary_email/">primary_email</a></td>
-<td>The main email address of a person</td>
+<td><a href="field_program_cruise/">field_program_cruise</a></td>
+<td>Enter the name of the DOE project to associate with this/these sample(s)</td>
 </tr>
 <tr>
-<td><a href="vital_status/">vital_status</a></td>
-<td>living or dead status</td>
+<td><a href="filter_size/">filter_size</a></td>
+<td>Filtering pore size used in sample preparation (filter size value range)</td>
+</tr>
+<tr>
+<td><a href="filter_size_unit/">filter_size_unit</a></td>
+<td>Filtering pore size unit</td>
+</tr>
+<tr>
+<td><a href="igsn/">igsn</a></td>
+<td>Globally unique and persistent identifier for the sample</td>
+</tr>
+<tr>
+<td><a href="latitude/">latitude</a></td>
+<td>Latitude of the location where the sample was collected, entered in decimal d...</td>
+</tr>
+<tr>
+<td><a href="location_description/">location_description</a></td>
+<td>Free text description of the location</td>
+</tr>
+<tr>
+<td><a href="location_id/">location_id</a></td>
+<td>A unique identifier for the set of location information</td>
+</tr>
+<tr>
+<td><a href="longitude/">longitude</a></td>
+<td>Longitude of the location where the sample was collected</td>
+</tr>
+<tr>
+<td><a href="material/">material</a></td>
+<td>material that the sample consists of</td>
+</tr>
+<tr>
+<td><a href="maximum_distance_above_surface_in_meters/">maximum_distance_above_surface_in_meters</a></td>
+<td>Maximum height above the ground surface, in meters</td>
+</tr>
+<tr>
+<td><a href="minimum_distance_above_surface_in_meters/">minimum_distance_above_surface_in_meters</a></td>
+<td>Minimum height above the ground surface, in meters</td>
+</tr>
+<tr>
+<td><a href="navigation_type/">navigation_type</a></td>
+<td>Type of geolocation instrument used to obtain geographic coordinates</td>
+</tr>
+<tr>
+<td><a href="other_names/">other_names</a></td>
+<td>Other sample name(s) that have been used in the past</td>
+</tr>
+<tr>
+<td><a href="parent_igsn/">parent_igsn</a></td>
+<td>The larger sample from which a child sample was derived</td>
+</tr>
+<tr>
+<td><a href="primary_physiographic_feature/">primary_physiographic_feature</a></td>
+<td>Entity or entities which are in your sample or specimen’s local vicinity and ...</td>
+</tr>
+<tr>
+<td><a href="purpose/">purpose</a></td>
+<td>The scientific purpose for collecting the sample</td>
+</tr>
+<tr>
+<td><a href="related_url/">related_url</a></td>
+<td>Related URL</td>
+</tr>
+<tr>
+<td><a href="related_url_description/">related_url_description</a></td>
+<td>Related URL Description</td>
+</tr>
+<tr>
+<td><a href="related_url_type/">related_url_type</a></td>
+<td>Related URL</td>
+</tr>
+<tr>
+<td><a href="release_date/">release_date</a></td>
+<td>Date when sample metadata should be publicly accessible and searchable</td>
+</tr>
+<tr>
+<td><a href="sample_description/">sample_description</a></td>
+<td>Description of sample features, such as its components, texture, color, shape...</td>
+</tr>
+<tr>
+<td><a href="sample_name/">sample_name</a></td>
+<td>Collector's project-specific sample name, which must be unique for each sampl...</td>
+</tr>
+<tr>
+<td><a href="sample_processing/">sample_processing</a></td>
+<td>Any processing applied to the sample during or after retrieving the sample fr...</td>
+</tr>
+<tr>
+<td><a href="scientific_name/">scientific_name</a></td>
+<td>The full scientific name, with authorship and date information if known</td>
+</tr>
+<tr>
+<td><a href="size/">size</a></td>
+<td>Size of the registered object, such as the surface area, length of a core, we...</td>
+</tr>
+<tr>
+<td><a href="size_unit/">size_unit</a></td>
+<td>Unit for the numerical value provided for ‘size’</td>
 </tr>
 </tbody>
 </table>
@@ -459,7 +611,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="PersonStatus/">PersonStatus</a></td>
+<td><a href="CollectionMethodMenu/">CollectionMethodMenu</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="CountryMenu/">CountryMenu</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="MaterialMenu/">MaterialMenu</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="NavigationTypeMenu/">NavigationTypeMenu</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="ObjectTypeMenu/">ObjectTypeMenu</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="SizeUnitMenu/">SizeUnitMenu</a></td>
 <td></td>
 </tr>
 </tbody>

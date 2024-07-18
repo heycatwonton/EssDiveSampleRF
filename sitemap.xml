@@ -11,6 +11,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/CollectionMethodMenu/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/CountryMenu/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://heycatwonton.github.io/EssDiveSampleRF/Curie/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
@@ -36,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/DhInterface/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://heycatwonton.github.io/EssDiveSampleRF/Double/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
@@ -47,11 +62,6 @@
     </url>
     <url>
          <loc>https://heycatwonton.github.io/EssDiveSampleRF/EssDiveSampleCollection/</loc>
-         <lastmod>2024-07-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://heycatwonton.github.io/EssDiveSampleRF/EssDiveSampleRF/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -76,7 +86,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heycatwonton.github.io/EssDiveSampleRF/NamedThing/</loc>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/MaterialMenu/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/NavigationTypeMenu/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -91,12 +106,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/ObjectTypeMenu/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://heycatwonton.github.io/EssDiveSampleRF/Objectidentifier/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heycatwonton.github.io/EssDiveSampleRF/PersonStatus/</loc>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/SizeUnitMenu/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -131,17 +151,87 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heycatwonton.github.io/EssDiveSampleRF/age_in_years/</loc>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/biome/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heycatwonton.github.io/EssDiveSampleRF/birth_date/</loc>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/collection_date/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heycatwonton.github.io/EssDiveSampleRF/description/</loc>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/collection_id/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/collection_method/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/collection_method_description/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/collection_time/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/collector_chief_scientist/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/comment/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/country/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/current_archive/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/current_archive_contact/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/depth_in_core_max/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/depth_in_core_min/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/depth_scale/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/elevation_end/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/elevation_start/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/elevation_unit/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -151,22 +241,147 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heycatwonton.github.io/EssDiveSampleRF/id/</loc>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/essdive-sample-reporting-format/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heycatwonton.github.io/EssDiveSampleRF/name/</loc>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/event_id/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heycatwonton.github.io/EssDiveSampleRF/primary_email/</loc>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/field_name_informal_classification/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heycatwonton.github.io/EssDiveSampleRF/vital_status/</loc>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/field_program_cruise/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/filter_size/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/filter_size_unit/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/igsn/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/latitude/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/location_description/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/location_id/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/longitude/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/material/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/maximum_distance_above_surface_in_meters/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/minimum_distance_above_surface_in_meters/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/navigation_type/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/other_names/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/parent_igsn/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/primary_physiographic_feature/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/purpose/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/related_url/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/related_url_description/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/related_url_type/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/release_date/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/sample_description/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/sample_name/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/sample_processing/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/scientific_name/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/size/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heycatwonton.github.io/EssDiveSampleRF/size_unit/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>

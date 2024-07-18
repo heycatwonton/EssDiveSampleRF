@@ -205,40 +205,135 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-essdivesample">Class: EssDiveSample</h1>
-<p><em>Represents a EssDiveSample</em></p>
-<p>URI: <a href="https://w3id.org/heycatwonton/EssDiveSampleRF/EssDiveSample">essdivesamplerf:EssDiveSample</a></p>
+<p><em>Represents ESS-DIVE specification for data</em></p>
+<p>URI: <a href="https://w3id.org/ess-dive-community/essdive-sample-reporting-format/EssDiveSample">essdive_sample_reporting_format:EssDiveSample</a></p>
 <div class="mermaid"> classDiagram
     class EssDiveSample
     click EssDiveSample href "../EssDiveSample"
-      NamedThing &lt;|-- EssDiveSample
-        click NamedThing href "../NamedThing"
+      DhInterface &lt;|-- EssDiveSample
+        click DhInterface href "../DhInterface"
 
-      EssDiveSample : age_in_years
+      EssDiveSample : biome
 
-      EssDiveSample : birth_date
+      EssDiveSample : collection_date
 
-      EssDiveSample : description
+      EssDiveSample : collection_id
 
-      EssDiveSample : id
+      EssDiveSample : collection_method_description
 
-      EssDiveSample : name
+      EssDiveSample : collection_time
 
-      EssDiveSample : primary_email
+      EssDiveSample : collector_chief_scientist
 
-      EssDiveSample : vital_status
+      EssDiveSample : comment
+
+      EssDiveSample : country
 
 
 
 
-    EssDiveSample --&gt; "0..1" PersonStatus : vital_status
-    click PersonStatus href "../PersonStatus"
+    EssDiveSample --&gt; "1" CountryMenu : country
+    click CountryMenu href "../CountryMenu"
+
+
+      EssDiveSample : current_archive
+
+      EssDiveSample : current_archive_contact
+
+      EssDiveSample : depth_in_core_max
+
+      EssDiveSample : depth_in_core_min
+
+      EssDiveSample : depth_scale
+
+      EssDiveSample : elevation_end
+
+      EssDiveSample : elevation_start
+
+      EssDiveSample : elevation_unit
+
+      EssDiveSample : event_id
+
+      EssDiveSample : field_name_informal_classification
+
+      EssDiveSample : field_program_cruise
+
+      EssDiveSample : filter_size
+
+      EssDiveSample : filter_size_unit
+
+      EssDiveSample : igsn
+
+      EssDiveSample : latitude
+
+      EssDiveSample : location_description
+
+      EssDiveSample : location_id
+
+      EssDiveSample : longitude
+
+      EssDiveSample : material
+
+
+
+
+    EssDiveSample --&gt; "1" MaterialMenu : material
+    click MaterialMenu href "../MaterialMenu"
+
+
+      EssDiveSample : maximum_distance_above_surface_in_meters
+
+      EssDiveSample : minimum_distance_above_surface_in_meters
+
+      EssDiveSample : navigation_type
+
+
+
+
+    EssDiveSample --&gt; "0..1 _recommended_" NavigationTypeMenu : navigation_type
+    click NavigationTypeMenu href "../NavigationTypeMenu"
+
+
+      EssDiveSample : other_names
+
+      EssDiveSample : parent_igsn
+
+      EssDiveSample : primary_physiographic_feature
+
+      EssDiveSample : purpose
+
+      EssDiveSample : related_url
+
+      EssDiveSample : related_url_description
+
+      EssDiveSample : related_url_type
+
+      EssDiveSample : release_date
+
+      EssDiveSample : sample_description
+
+      EssDiveSample : sample_name
+
+      EssDiveSample : sample_processing
+
+      EssDiveSample : scientific_name
+
+      EssDiveSample : size
+
+      EssDiveSample : size_unit
+
+
+
+
+    EssDiveSample --&gt; "0..1 _recommended_" SizeUnitMenu : size_unit
+    click SizeUnitMenu href "../SizeUnitMenu"
 
 
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../NamedThing/">NamedThing</a><ul>
+<li><a href="../DhInterface/">DhInterface</a><ul>
 <li><strong>EssDiveSample</strong></li>
 </ul>
 </li>
@@ -255,46 +350,268 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../primary_email/">primary_email</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The main email address of a person</td>
+<td><a href="../sample_name/">sample_name</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Collector's project-specific sample name, which must be unique for each sampl...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../birth_date/">birth_date</a></td>
+<td><a href="../other_names/">other_names</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Other sample name(s) that have been used in the past</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../igsn/">igsn</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>Globally unique and persistent identifier for the sample</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../parent_igsn/">parent_igsn</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>The larger sample from which a child sample was derived</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../collection_id/">collection_id</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A unique identifier for the set of information associated with a collection o...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../event_id/">event_id</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A unique identifier for the set of information associated with an Event (some...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../location_id/">location_id</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A unique identifier for the set of location information</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../material/">material</a></td>
+<td>1 <br/> <a href="../MaterialMenu/">MaterialMenu</a></td>
+<td>material that the sample consists of</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../field_name_informal_classification/">field_name_informal_classification</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Informal classification of sample</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../sample_description/">sample_description</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>Description of sample features, such as its components, texture, color, shape...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../purpose/">purpose</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>The scientific purpose for collecting the sample</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../size/">size</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Size of the registered object, such as the surface area, length of a core, we...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../size_unit/">size_unit</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../SizeUnitMenu/">SizeUnitMenu</a></td>
+<td>Unit for the numerical value provided for ‘size’</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../filter_size/">filter_size</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>Filtering pore size used in sample preparation (filter size value range)</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../filter_size_unit/">filter_size_unit</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Filtering pore size unit</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../scientific_name/">scientific_name</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>The full scientific name, with authorship and date information if known</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../comment/">comment</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Comments or notes about the sample</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../collector_chief_scientist/">collector_chief_scientist</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Name of the person(s) who collected the sample</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../collection_date/">collection_date</a></td>
+<td>1 <br/> <a href="../Date/">Date</a></td>
+<td>Date when the sample was collected</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../collection_time/">collection_time</a></td>
+<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
+<td>Time when the sample was collected</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../collection_method_description/">collection_method_description</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Description of the collection method for the sample</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../sample_processing/">sample_processing</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>Any processing applied to the sample during or after retrieving the sample fr...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../field_program_cruise/">field_program_cruise</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Enter the name of the DOE project to associate with this/these sample(s)</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../latitude/">latitude</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../Float/">Float</a></td>
+<td>Latitude of the location where the sample was collected, entered in decimal d...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../longitude/">longitude</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../Float/">Float</a></td>
+<td>Longitude of the location where the sample was collected</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../navigation_type/">navigation_type</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../NavigationTypeMenu/">NavigationTypeMenu</a></td>
+<td>Type of geolocation instrument used to obtain geographic coordinates</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../location_description/">location_description</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>Free text description of the location</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../country/">country</a></td>
+<td>1 <br/> <a href="../CountryMenu/">CountryMenu</a></td>
+<td>Country where the sample was collected</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../elevation_start/">elevation_start</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Elevation at which a sample was collected</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../elevation_end/">elevation_end</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Maximum elevation at which a sample was collected, if elevation was taken ove...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../elevation_unit/">elevation_unit</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>Unit that elevation start and/or end are provided in</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../depth_in_core_min/">depth_in_core_min</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>Depth, or minimum depth (if taken over a range) at which a sample was collect...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../depth_in_core_max/">depth_in_core_max</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>Maximum depth at which a sample was collected, below ground or under water</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../depth_scale/">depth_scale</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>Unit in which the depth is provided, should be meters</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../minimum_distance_above_surface_in_meters/">minimum_distance_above_surface_in_meters</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Minimum height above the ground surface, in meters</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../maximum_distance_above_surface_in_meters/">maximum_distance_above_surface_in_meters</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Maximum height above the ground surface, in meters</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../primary_physiographic_feature/">primary_physiographic_feature</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>Entity or entities which are in your sample or specimen’s local vicinity and ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../biome/">biome</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>Major environmental system your sample or specimen came from</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../release_date/">release_date</a></td>
 <td>0..1 <br/> <a href="../Date/">Date</a></td>
-<td>Date on which a person is born</td>
+<td>Date when sample metadata should be publicly accessible and searchable</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../age_in_years/">age_in_years</a></td>
-<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>Number of years since birth</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../vital_status/">vital_status</a></td>
-<td>0..1 <br/> <a href="../PersonStatus/">PersonStatus</a></td>
-<td>living or dead status</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../id/">id</a></td>
-<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>A unique identifier for a thing</td>
-<td><a href="../NamedThing/">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../name/">name</a></td>
+<td><a href="../current_archive/">current_archive</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A human-readable name for a thing</td>
-<td><a href="../NamedThing/">NamedThing</a></td>
+<td>Name of institution, museum, or repository where the sample is currently stor...</td>
+<td>direct</td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
+<td><a href="../current_archive_contact/">current_archive_contact</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A human-readable description for a thing</td>
-<td><a href="../NamedThing/">NamedThing</a></td>
+<td>Address and/or email of the person who should be contacted for information ab...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../related_url/">related_url</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Related URL</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../related_url_type/">related_url_type</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Related URL</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../related_url_description/">related_url_description</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Related URL Description</td>
+<td>direct</td>
 </tr>
 </tbody>
 </table>
@@ -320,7 +637,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/heycatwonton/EssDiveSampleRF</li>
+<li>from schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -333,11 +650,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>essdivesamplerf:EssDiveSample</td>
+<td>essdive_sample_reporting_format:EssDiveSample</td>
 </tr>
 <tr>
 <td>native</td>
-<td>essdivesamplerf:EssDiveSample</td>
+<td>essdive_sample_reporting_format:EssDiveSample</td>
 </tr>
 </tbody>
 </table>
@@ -346,113 +663,1213 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: EssDiveSample
-description: Represents a EssDiveSample
-from_schema: https://w3id.org/heycatwonton/EssDiveSampleRF
-is_a: NamedThing
+description: Represents ESS-DIVE specification for data
+from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+is_a: dh_interface
 slots:
-- primary_email
-- birth_date
-- age_in_years
-- vital_status
+- sample_name
+- other_names
+- igsn
+- parent_igsn
+- collection_id
+- event_id
+- location_id
+- material
+- field_name_informal_classification
+- sample_description
+- purpose
+- size
+- size_unit
+- filter_size
+- filter_size_unit
+- scientific_name
+- comment
+- collector_chief_scientist
+- collection_date
+- collection_time
+- collection_method_description
+- sample_processing
+- field_program_cruise
+- latitude
+- longitude
+- navigation_type
+- location_description
+- country
+- elevation_start
+- elevation_end
+- elevation_unit
+- depth_in_core_min
+- depth_in_core_max
+- depth_scale
+- minimum_distance_above_surface_in_meters
+- maximum_distance_above_surface_in_meters
+- primary_physiographic_feature
+- biome
+- release_date
+- current_archive
+- current_archive_contact
+- related_url
+- related_url_type
+- related_url_description
 slot_usage:
-  primary_email:
-    name: primary_email
+  sample_name:
+    name: sample_name
+    rank: 1
     domain_of:
     - EssDiveSample
-    pattern: ^\S+@[\S+\.]+\S+
+    slot_group: Sample IDs and Related Identifiers
+  other_names:
+    name: other_names
+    rank: 2
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+  igsn:
+    name: igsn
+    rank: 3
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+  parent_igsn:
+    name: parent_igsn
+    rank: 4
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+  collection_id:
+    name: collection_id
+    rank: 5
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+  event_id:
+    name: event_id
+    rank: 6
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+  location_id:
+    name: location_id
+    rank: 7
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+  material:
+    name: material
+    rank: 8
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  field_name_informal_classification:
+    name: field_name_informal_classification
+    rank: 9
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  sample_description:
+    name: sample_description
+    rank: 10
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  purpose:
+    name: purpose
+    rank: 11
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  size:
+    name: size
+    rank: 12
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  size_unit:
+    name: size_unit
+    rank: 13
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  filter_size:
+    name: filter_size
+    rank: 14
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  filter_size_unit:
+    name: filter_size_unit
+    rank: 15
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  scientific_name:
+    name: scientific_name
+    rank: 16
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  comment:
+    name: comment
+    rank: 17
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  collector_chief_scientist:
+    name: collector_chief_scientist
+    rank: 18
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+  collection_date:
+    name: collection_date
+    rank: 19
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+  collection_time:
+    name: collection_time
+    rank: 20
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+  collection_method:
+    name: collection_method
+    rank: 21
+    slot_group: Sample Collection Details
+  collection_method_description:
+    name: collection_method_description
+    rank: 22
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+  sample_processing:
+    name: sample_processing
+    rank: 23
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+  field_program_cruise:
+    name: field_program_cruise
+    rank: 24
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+  latitude:
+    name: latitude
+    rank: 25
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  longitude:
+    name: longitude
+    rank: 26
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  navigation_type:
+    name: navigation_type
+    rank: 27
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  location_description:
+    name: location_description
+    rank: 28
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  country:
+    name: country
+    rank: 29
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  elevation_start:
+    name: elevation_start
+    rank: 30
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  elevation_end:
+    name: elevation_end
+    rank: 31
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  elevation_unit:
+    name: elevation_unit
+    rank: 32
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  depth_in_core_min:
+    name: depth_in_core_min
+    rank: 33
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  depth_in_core_max:
+    name: depth_in_core_max
+    rank: 34
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  depth_scale:
+    name: depth_scale
+    rank: 35
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  minimum_distance_above_surface_in_meters:
+    name: minimum_distance_above_surface_in_meters
+    rank: 36
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  maximum_distance_above_surface_in_meters:
+    name: maximum_distance_above_surface_in_meters
+    rank: 37
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  primary_physiographic_feature:
+    name: primary_physiographic_feature
+    rank: 38
+    domain_of:
+    - EssDiveSample
+    slot_group: Environmental Context
+  biome:
+    name: biome
+    rank: 39
+    domain_of:
+    - EssDiveSample
+    slot_group: Environmental Context
+  release_date:
+    name: release_date
+    rank: 40
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
+  current_archive:
+    name: current_archive
+    rank: 41
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
+  current_archive_contact:
+    name: current_archive_contact
+    rank: 42
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
+  related_url:
+    name: related_url
+    rank: 43
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
+  related_url_type:
+    name: related_url_type
+    rank: 44
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
+  related_url_description:
+    name: related_url_description
+    rank: 45
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: EssDiveSample
-description: Represents a EssDiveSample
-from_schema: https://w3id.org/heycatwonton/EssDiveSampleRF
-is_a: NamedThing
+description: Represents ESS-DIVE specification for data
+from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+is_a: dh_interface
 slot_usage:
-  primary_email:
-    name: primary_email
+  sample_name:
+    name: sample_name
+    rank: 1
     domain_of:
     - EssDiveSample
-    pattern: ^\S+@[\S+\.]+\S+
+    slot_group: Sample IDs and Related Identifiers
+  other_names:
+    name: other_names
+    rank: 2
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+  igsn:
+    name: igsn
+    rank: 3
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+  parent_igsn:
+    name: parent_igsn
+    rank: 4
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+  collection_id:
+    name: collection_id
+    rank: 5
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+  event_id:
+    name: event_id
+    rank: 6
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+  location_id:
+    name: location_id
+    rank: 7
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+  material:
+    name: material
+    rank: 8
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  field_name_informal_classification:
+    name: field_name_informal_classification
+    rank: 9
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  sample_description:
+    name: sample_description
+    rank: 10
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  purpose:
+    name: purpose
+    rank: 11
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  size:
+    name: size
+    rank: 12
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  size_unit:
+    name: size_unit
+    rank: 13
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  filter_size:
+    name: filter_size
+    rank: 14
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  filter_size_unit:
+    name: filter_size_unit
+    rank: 15
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  scientific_name:
+    name: scientific_name
+    rank: 16
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  comment:
+    name: comment
+    rank: 17
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+  collector_chief_scientist:
+    name: collector_chief_scientist
+    rank: 18
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+  collection_date:
+    name: collection_date
+    rank: 19
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+  collection_time:
+    name: collection_time
+    rank: 20
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+  collection_method:
+    name: collection_method
+    rank: 21
+    slot_group: Sample Collection Details
+  collection_method_description:
+    name: collection_method_description
+    rank: 22
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+  sample_processing:
+    name: sample_processing
+    rank: 23
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+  field_program_cruise:
+    name: field_program_cruise
+    rank: 24
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+  latitude:
+    name: latitude
+    rank: 25
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  longitude:
+    name: longitude
+    rank: 26
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  navigation_type:
+    name: navigation_type
+    rank: 27
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  location_description:
+    name: location_description
+    rank: 28
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  country:
+    name: country
+    rank: 29
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  elevation_start:
+    name: elevation_start
+    rank: 30
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  elevation_end:
+    name: elevation_end
+    rank: 31
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  elevation_unit:
+    name: elevation_unit
+    rank: 32
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  depth_in_core_min:
+    name: depth_in_core_min
+    rank: 33
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  depth_in_core_max:
+    name: depth_in_core_max
+    rank: 34
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  depth_scale:
+    name: depth_scale
+    rank: 35
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  minimum_distance_above_surface_in_meters:
+    name: minimum_distance_above_surface_in_meters
+    rank: 36
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  maximum_distance_above_surface_in_meters:
+    name: maximum_distance_above_surface_in_meters
+    rank: 37
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+  primary_physiographic_feature:
+    name: primary_physiographic_feature
+    rank: 38
+    domain_of:
+    - EssDiveSample
+    slot_group: Environmental Context
+  biome:
+    name: biome
+    rank: 39
+    domain_of:
+    - EssDiveSample
+    slot_group: Environmental Context
+  release_date:
+    name: release_date
+    rank: 40
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
+  current_archive:
+    name: current_archive
+    rank: 41
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
+  current_archive_contact:
+    name: current_archive_contact
+    rank: 42
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
+  related_url:
+    name: related_url
+    rank: 43
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
+  related_url_type:
+    name: related_url_type
+    rank: 44
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
+  related_url_description:
+    name: related_url_description
+    rank: 45
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
 attributes:
-  primary_email:
-    name: primary_email
-    description: The main email address of a person
-    from_schema: https://w3id.org/heycatwonton/EssDiveSampleRF
-    rank: 1000
-    slot_uri: schema:email
-    alias: primary_email
-    owner: EssDiveSample
-    domain_of:
-    - EssDiveSample
-    range: string
-    pattern: ^\S+@[\S+\.]+\S+
-  birth_date:
-    name: birth_date
-    description: Date on which a person is born
-    from_schema: https://w3id.org/heycatwonton/EssDiveSampleRF
-    rank: 1000
-    slot_uri: schema:birthDate
-    alias: birth_date
-    owner: EssDiveSample
-    domain_of:
-    - EssDiveSample
-    range: date
-  age_in_years:
-    name: age_in_years
-    description: Number of years since birth
-    from_schema: https://w3id.org/heycatwonton/EssDiveSampleRF
-    rank: 1000
-    alias: age_in_years
-    owner: EssDiveSample
-    domain_of:
-    - EssDiveSample
-    range: integer
-  vital_status:
-    name: vital_status
-    description: living or dead status
-    from_schema: https://w3id.org/heycatwonton/EssDiveSampleRF
-    rank: 1000
-    alias: vital_status
-    owner: EssDiveSample
-    domain_of:
-    - EssDiveSample
-    range: PersonStatus
-  id:
-    name: id
-    description: A unique identifier for a thing
-    from_schema: https://w3id.org/heycatwonton/EssDiveSampleRF
-    rank: 1000
-    slot_uri: schema:identifier
+  sample_name:
+    name: sample_name
+    description: Collector's project-specific sample name, which must be unique for
+      each sample that you are submitting.
+    title: Sample Name
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 1
     identifier: true
-    alias: id
+    alias: sample_name
     owner: EssDiveSample
     domain_of:
-    - NamedThing
-    range: uriorcurie
-    required: true
-  name:
-    name: name
-    description: A human-readable name for a thing
-    from_schema: https://w3id.org/heycatwonton/EssDiveSampleRF
-    rank: 1000
-    slot_uri: schema:name
-    alias: name
-    owner: EssDiveSample
-    domain_of:
-    - NamedThing
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
     range: string
-  description:
-    name: description
-    description: A human-readable description for a thing
-    from_schema: https://w3id.org/heycatwonton/EssDiveSampleRF
-    rank: 1000
-    slot_uri: schema:description
-    alias: description
+    required: true
+  other_names:
+    name: other_names
+    description: Other sample name(s) that have been used in the past.
+    title: Other name(s)
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 2
+    alias: other_names
     owner: EssDiveSample
     domain_of:
-    - NamedThing
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+    range: string
+    required: false
+  igsn:
+    name: igsn
+    description: Globally unique and persistent identifier for the sample. Leave blank
+      if you want SESAR to assign the IGSN, which is recommended.
+    title: IGSN
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 3
+    alias: igsn
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+    range: string
+    recommended: true
+  parent_igsn:
+    name: parent_igsn
+    description: The larger sample from which a child sample was derived. For example,
+      a core section may be the parent of a series of subsamples or split samples.
+      Parent and child samples are linked in the SESAR catalog. Sibling samples are
+      inferred from parent-child relationships and are linked on the landing page
+      for a sample.
+    title: Parent IGSN
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 4
+    alias: parent_igsn
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+    range: string
+    recommended: true
+  collection_id:
+    name: collection_id
+    description: A unique identifier for the set of information associated with a
+      collection of samples; collections may be organized around a particular project,
+      data set, field season, region, site, etc.
+    title: Collection ID
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 5
+    alias: collection_id
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+    range: string
+    required: false
+  event_id:
+    name: event_id
+    description: A unique identifier for the set of information associated with an
+      Event (something that occurs at a place and time).
+    title: Event ID
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 6
+    alias: event_id
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+    range: string
+    required: false
+  location_id:
+    name: location_id
+    description: A unique identifier for the set of location information. May be a
+      global unique identifier or an identifier specific to the data set.
+    title: Location ID
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 7
+    alias: location_id
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample IDs and Related Identifiers
+    range: string
+    required: false
+  material:
+    name: material
+    description: material that the sample consists of.
+    title: Material
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 8
+    alias: material
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+    range: MaterialMenu
+    required: true
+  field_name_informal_classification:
+    name: field_name_informal_classification
+    description: Informal classification of sample
+    title: Field name (informal classification)
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 9
+    alias: field_name_informal_classification
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+    range: string
+    required: false
+  sample_description:
+    name: sample_description
+    description: Description of sample features, such as its components, texture,
+      color, shape, treatments, plot ID from which the sample was taken, etc.
+    title: Sample description
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 10
+    alias: sample_description
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+    range: string
+    recommended: true
+  purpose:
+    name: purpose
+    description: The scientific purpose for collecting the sample.
+    title: Purpose
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 11
+    alias: purpose
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+    range: string
+    recommended: true
+  size:
+    name: size
+    description: Size of the registered object, such as the surface area, length of
+      a core, weight, or volume.
+    title: Size
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 12
+    alias: size
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+    range: string
+    required: false
+  size_unit:
+    name: size_unit
+    description: Unit for the numerical value provided for ‘size’.
+    title: Size unit
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 13
+    alias: size_unit
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+    range: SizeUnitMenu
+    recommended: true
+  filter_size:
+    name: filter_size
+    description: Filtering pore size used in sample preparation (filter size value
+      range). Filter size value range.
+    title: Filter Size
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 14
+    alias: filter_size
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+    range: string
+    recommended: true
+    pattern: ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  filter_size_unit:
+    name: filter_size_unit
+    description: Filtering pore size unit.
+    title: Filter Size unit
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 15
+    alias: filter_size_unit
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+    range: string
+    recommended: false
+  scientific_name:
+    name: scientific_name
+    description: The full scientific name, with authorship and date information if
+      known. When forming part of an Identification, this should be the name in lowest
+      level taxonomic rank that can be determined.
+    title: Scientific name
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 16
+    alias: scientific_name
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+    range: string
+    recommended: true
+    pattern: ^[A-Z][a-z]+ [a-z][a-zA-Z]+$
+  comment:
+    name: comment
+    description: Comments or notes about the sample.
+    title: Comment
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 17
+    alias: comment
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Description
+    range: string
+    required: false
+  collector_chief_scientist:
+    name: collector_chief_scientist
+    description: Name of the person(s) who collected the sample.
+    title: Collector/Chief Scientist
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 18
+    alias: collector_chief_scientist
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+    range: string
+    required: true
+  collection_date:
+    name: collection_date
+    description: Date when the sample was collected.
+    title: Collection date
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 19
+    alias: collection_date
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+    range: date
+    required: true
+  collection_time:
+    name: collection_time
+    description: Time when the sample was collected.
+    title: Collection time
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 20
+    alias: collection_time
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+    range: datetime
+    required: false
+  collection_method_description:
+    name: collection_method_description
+    description: Description of the collection method for the sample. Include any
+      important terms and details for potential users to understand how your sample
+      was collected.
+    title: Collection method description
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 22
+    alias: collection_method_description
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+    range: string
+    required: true
+  sample_processing:
+    name: sample_processing
+    description: Any processing applied to the sample during or after retrieving the
+      sample from the environment. Can provide a list of preparations and preservation
+      methods for the sample.
+    title: Sample processing
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 23
+    alias: sample_processing
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+    range: string
+    recommended: true
+  field_program_cruise:
+    name: field_program_cruise
+    description: Enter the name of the DOE project to associate with this/these sample(s).
+    title: Field program/cruise
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 24
+    alias: field_program_cruise
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Collection Details
+    range: string
+    required: true
+  latitude:
+    name: latitude
+    description: Latitude of the location where the sample was collected, entered
+      in decimal degrees. Negative values for South latitudes.
+    title: Latitude
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 25
+    alias: latitude
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+    range: float
+    recommended: true
+    minimum_value: -90
+    maximum_value: 90
+    pattern: ^-?\d+(\.\d{1,6})?$
+  longitude:
+    name: longitude
+    description: Longitude of the location where the sample was collected. Negative
+      values for ‘West’ longitudes.
+    title: Longitude
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 26
+    alias: longitude
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+    range: float
+    recommended: true
+    minimum_value: -180
+    maximum_value: 180
+    pattern: ^-?\d+(\.\d{1,6})?$
+  navigation_type:
+    name: navigation_type
+    description: Type of geolocation instrument used to obtain geographic coordinates.
+    title: Navigation type
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 27
+    alias: navigation_type
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+    range: NavigationTypeMenu
+    recommended: true
+  location_description:
+    name: location_description
+    description: Free text description of the location.
+    title: Location description
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 28
+    alias: location_description
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+    range: string
+    recommended: true
+  country:
+    name: country
+    description: Country where the sample was collected.
+    title: Country
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 29
+    alias: country
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+    range: CountryMenu
+    required: true
+  elevation_start:
+    name: elevation_start
+    description: Elevation at which a sample was collected. Minimum elevation value,
+      if elevation taken over a range.
+    title: Elevation start
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 30
+    alias: elevation_start
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+    range: string
+    recommended: false
+  elevation_end:
+    name: elevation_end
+    description: Maximum elevation at which a sample was collected, if elevation was
+      taken over a range.
+    title: Elevation end
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 31
+    alias: elevation_end
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+    range: string
+    recommended: false
+  elevation_unit:
+    name: elevation_unit
+    description: Unit that elevation start and/or end are provided in.
+    title: Elevation unit
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 32
+    alias: elevation_unit
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+    range: string
+    recommended: true
+  depth_in_core_min:
+    name: depth_in_core_min
+    description: Depth, or minimum depth (if taken over a range) at which a sample
+      was collected, below ground or under water.
+    title: Depth in Core (min)
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 33
+    alias: depth_in_core_min
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+    range: string
+    recommended: true
+  depth_in_core_max:
+    name: depth_in_core_max
+    description: Maximum depth at which a sample was collected, below ground or under
+      water.
+    title: Depth in Core (max)
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 34
+    alias: depth_in_core_max
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+    range: string
+    recommended: true
+  depth_scale:
+    name: depth_scale
+    description: Unit in which the depth is provided, should be meters.
+    title: Depth scale
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 35
+    alias: depth_scale
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+    range: string
+    recommended: true
+  minimum_distance_above_surface_in_meters:
+    name: minimum_distance_above_surface_in_meters
+    description: Minimum height above the ground surface, in meters. If no range of
+      values collected, provide height measurement here.
+    title: Minimum distance above surface in meters
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 36
+    alias: minimum_distance_above_surface_in_meters
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+    range: string
+    required: false
+  maximum_distance_above_surface_in_meters:
+    name: maximum_distance_above_surface_in_meters
+    description: Maximum height above the ground surface, in meters.
+    title: Maximum distance above surface in meters
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 37
+    alias: maximum_distance_above_surface_in_meters
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Location
+    range: string
+    required: false
+  primary_physiographic_feature:
+    name: primary_physiographic_feature
+    description: Entity or entities which are in your sample or specimen’s local vicinity
+      and which you believe have significant causal influences on your sample or specimen.
+    title: Primary physiographic feature
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 38
+    alias: primary_physiographic_feature
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Environmental Context
+    range: string
+    recommended: true
+  biome:
+    name: biome
+    description: Major environmental system your sample or specimen came from. The
+      systems identified should have a coarse spatial grain, to provide the general
+      environmental context of where the sampling was done (e.g. were you in the desert
+      or a rainforest?).
+    title: Biome
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 39
+    alias: biome
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Environmental Context
+    range: string
+    recommended: true
+  release_date:
+    name: release_date
+    description: Date when sample metadata should be publicly accessible and searchable.
+      If null, defaults to date of registration in SESAR (recommended).
+    title: Release Date
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 40
+    alias: release_date
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
+    range: date
+    required: false
+  current_archive:
+    name: current_archive
+    description: Name of institution, museum, or repository where the sample is currently
+      stored.
+    title: Current archive
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 41
+    alias: current_archive
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
+    range: string
+    required: false
+  current_archive_contact:
+    name: current_archive_contact
+    description: Address and/or email of the person who should be contacted for information
+      about or access to the sample.
+    title: Current archive contact
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 42
+    alias: current_archive_contact
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
+    range: string
+    required: false
+  related_url:
+    name: related_url
+    description: Related URL
+    title: Related URL
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 43
+    alias: related_url
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
+    range: string
+  related_url_type:
+    name: related_url_type
+    description: Related URL
+    title: Related URL Type
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 44
+    alias: related_url_type
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
+    range: string
+  related_url_description:
+    name: related_url_description
+    description: Related URL Description
+    title: Related URL Description
+    from_schema: https://w3id.org/ess-dive-community/essdive-sample-reporting-format
+    rank: 45
+    alias: related_url_description
+    owner: EssDiveSample
+    domain_of:
+    - EssDiveSample
+    slot_group: Sample Access
     range: string
 
 </code></pre>
